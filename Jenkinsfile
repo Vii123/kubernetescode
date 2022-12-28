@@ -22,7 +22,7 @@ node {
 
     stage('Push image') {
         
-        docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {     #here keyword dockerhub represents the id and credentials ofdocker in jenkins
+        docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {     
             app.push("${env.BUILD_NUMBER}")
         }
     }
